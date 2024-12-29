@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/lokeshrepaka/Desktop/project/mlruns/812765104524083983/235ac9a35d1540829aba1fc4e7b9620d/artifacts
+end_time: 1735452642451
+entry_point_name: ''
+experiment_id: '812765104524083983'
+lifecycle_stage: active
+run_id: 235ac9a35d1540829aba1fc4e7b9620d
+run_name: delicate-sheep-692
+run_uuid: 235ac9a35d1540829aba1fc4e7b9620d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735452642324
+status: 4
+tags: []
+user_id: lokeshrepaka

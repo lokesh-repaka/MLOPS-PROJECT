@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mlops
+Version: 0.1
+Summary: MLOPS PROJECT
+Author: Lokesh
+Author-email: abc@gmail.com
+Requires-Python: >=3.7
+Requires-Dist: setuptools
+Requires-Dist: mysql-connector-python
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost==2.0.0
+Requires-Dist: lightgbm==2.2.0
+Requires-Dist: tensorboard
+Requires-Dist: torch
+Requires-Dist: matplotlib
+Requires-Dist: mlflow

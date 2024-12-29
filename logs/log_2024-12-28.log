@@ -1,0 +1,102 @@
+2024-12-28 15:49:35,677 - INFO - Starting main program
+2024-12-28 15:49:35,677 - ERROR - Error Occured
+2024-12-28 15:49:35,677 - ERROR - Error in /Users/lokeshrepaka/Desktop/project/testing.py , line 9 : Division by zero
+2024-12-28 15:49:35,677 - INFO - end pf program
+2024-12-28 16:43:23,333 - INFO - Your Databse configuration has been set up
+2024-12-28 16:43:23,397 - INFO - Succesfully connected to the Databse
+2024-12-28 16:43:24,006 - INFO - Data Fetched Succesfully !!
+2024-12-28 16:43:24,465 - INFO - Data Succesfully saved to ./artifacts/raw/data.csv
+2024-12-28 16:43:24,466 - INFO - Disconnected to the Database
+2024-12-28 17:48:48,871 - INFO - Data Ingestion has started
+2024-12-28 17:48:48,871 - INFO - Directory for Ingestion created
+2024-12-28 17:48:49,119 - INFO - Data loaded successfully with shape: (103904, 25)
+2024-12-28 17:48:49,138 - INFO - Data Splitted Sucessfully
+2024-12-28 17:48:50,026 - INFO - Training and testing data saved sucesffuly
+2024-12-28 19:43:09,966 - INFO - Starting the pipeline of Data Procesing
+2024-12-28 19:43:09,966 - INFO - Data Processinng Started
+2024-12-28 19:43:10,138 - INFO - Data read succesfull : Data shape : (83123, 25)
+2024-12-28 19:43:10,138 - INFO - Dropping Unnecesary Columns :  ['MyUnknownColumn', 'id']
+2024-12-28 19:43:10,149 - INFO - Columns dropped Sucesfully : Shape = (83123, 23)
+2024-12-28 19:43:10,151 - INFO - Handling outliers : Columns = ['Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes', 'Checkin service']
+2024-12-28 19:43:10,167 - INFO - Outliers handled  Sucesffuully : (83123, 23)
+2024-12-28 19:43:10,167 - INFO - Handling null values
+2024-12-28 19:43:10,169 - INFO - Missing values handled sucessfully : Shape == (83123, 23)
+2024-12-28 19:43:10,593 - INFO - Processed data saved sucesfully
+2024-12-28 19:43:10,593 - INFO - Data Proccesing Pipeline COmpleted Sucessfully
+2024-12-28 20:27:00,074 - INFO - Starting the pipeline of Data Procesing
+2024-12-28 20:27:00,075 - INFO - Data Processinng Started
+2024-12-28 20:27:00,206 - INFO - Data read succesfull : Data shape : (83123, 25)
+2024-12-28 20:27:00,206 - INFO - Dropping Unnecesary Columns :  ['MyUnknownColumn', 'id']
+2024-12-28 20:27:00,218 - INFO - Columns dropped Sucesfully : Shape = (83123, 23)
+2024-12-28 20:27:00,219 - INFO - Handling outliers : Columns = ['Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes', 'Checkin service']
+2024-12-28 20:27:00,236 - INFO - Outliers handled  Sucesffuully : (83123, 23)
+2024-12-28 20:27:00,236 - INFO - Handling null values
+2024-12-28 20:27:00,237 - INFO - Missing values handled sucessfully : Shape == (83123, 23)
+2024-12-28 20:27:00,661 - INFO - Processed data saved sucesfully
+2024-12-28 20:27:00,661 - INFO - Data Proccesing Pipeline COmpleted Sucessfully
+2024-12-28 20:27:45,482 - INFO - Starting your feature enginnering pipeline
+2024-12-28 20:27:45,482 - INFO - Loading data
+2024-12-28 20:27:45,591 - INFO - Data loaded sucesffuly
+2024-12-28 20:27:45,591 - INFO - Starting Feature Construction
+2024-12-28 20:27:45,595 - INFO - Feature Construction done sucesfully
+2024-12-28 20:27:45,595 - INFO - Starting Binning of Age Column
+2024-12-28 20:27:45,602 - INFO - Binning of Age Column Sucesfull
+2024-12-28 20:27:45,602 - INFO - Performing label encoding on ['Gender', 'Customer Type', 'Type of Travel', 'Class', 'satisfaction', 'Age Group']
+2024-12-28 20:27:45,661 - INFO - Mapping for Gender : {'Female': np.int64(0), 'Male': np.int64(1)}
+2024-12-28 20:27:45,661 - INFO - Mapping for Customer Type : {'Loyal Customer': np.int64(0), 'disloyal Customer': np.int64(1)}
+2024-12-28 20:27:45,661 - INFO - Mapping for Type of Travel : {'Business travel': np.int64(0), 'Personal Travel': np.int64(1)}
+2024-12-28 20:27:45,661 - INFO - Mapping for Class : {'Business': np.int64(0), 'Eco': np.int64(1), 'Eco Plus': np.int64(2)}
+2024-12-28 20:27:45,661 - INFO - Mapping for satisfaction : {'neutral or dissatisfied': np.int64(0), 'satisfied': np.int64(1)}
+2024-12-28 20:27:45,661 - INFO - Mapping for Age Group : {'Adult': np.int64(0), 'Child': np.int64(1), 'Senior': np.int64(2), 'Youngster': np.int64(3)}
+2024-12-28 20:27:45,661 - INFO - Label Encoding sucesffull
+2024-12-28 20:27:45,661 - INFO - Starting Feature Selection
+2024-12-28 20:27:46,032 - INFO - Mutual Information Table is : 
+                              Feature  Mutual Information
+11                    Online boarding            0.211560
+23                        Delay Ratio            0.203223
+6               Inflight wifi service            0.163365
+4                               Class            0.134928
+3                      Type of Travel            0.114626
+5                     Flight Distance            0.091491
+13             Inflight entertainment            0.091207
+12                       Seat comfort            0.077452
+15                   Leg room service            0.060770
+14                   On-board service            0.056898
+8              Ease of Online booking            0.052302
+19                        Cleanliness            0.049877
+2                                 Age            0.046463
+16                   Baggage handling            0.042174
+18                   Inflight service            0.040770
+17                    Checkin service            0.032409
+10                     Food and drink            0.025753
+24                          Age Group            0.021902
+1                       Customer Type            0.017990
+9                       Gate location            0.012826
+21           Arrival Delay in Minutes            0.006706
+22                        Total Delay            0.005554
+20         Departure Delay in Minutes            0.003023
+7   Departure/Arrival time convenient            0.002004
+0                              Gender            0.000042
+2024-12-28 20:27:46,035 - INFO - Top features : ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
+2024-12-28 20:27:46,035 - INFO - Feature Selection Sucesfull
+2024-12-28 20:27:46,035 - INFO - Saving your data ...
+2024-12-28 20:27:46,291 - INFO - Data Saved succesfully at ./artifacts/engineered_data/final_df.csv
+2024-12-28 20:27:46,291 - INFO - Your FE pipeline sucesfully done..
+2024-12-28 20:27:46,291 - INFO - End of FE pipeline
+2024-12-28 23:44:01,846 - INFO - Starting main program
+2024-12-28 23:44:01,847 - ERROR - Error Occured
+2024-12-28 23:44:01,847 - ERROR - Error in /Users/lokeshrepaka/Desktop/project/testing.py , line 9 : Division by zero
+2024-12-28 23:44:01,847 - INFO - end pf program
+2024-12-28 23:48:09,896 - INFO - Starting ModelSelection pipeline
+2024-12-28 23:48:09,896 - INFO - Loading CSV file
+2024-12-28 23:48:10,000 - INFO - Data loaded and sampled sucesfully
+2024-12-28 23:48:10,000 - INFO - Splitting data
+2024-12-28 23:48:10,004 - INFO - Training and evalation started
+2024-12-28 23:48:11,186 - INFO - Random Forest trained sucesfullyMetrics : Accuracy : 0.9224293445580276 , Precision : 0.9223764764681933 , Recall : 0.9224293445580276 , F1 Score : 0.9222792483369147
+2024-12-28 23:48:16,922 - INFO - Gradient Boosting trained sucesfullyMetrics : Accuracy : 0.9073962717979555 , Precision : 0.9072761188275053 , Recall : 0.9073962717979555 , F1 Score : 0.9072271718513234
+2024-12-28 23:48:17,361 - INFO - AdaBoost trained sucesfullyMetrics : Accuracy : 0.8947684906794949 , Precision : 0.8947140716346806 , Recall : 0.8947684906794949 , F1 Score : 0.8947383131925268
+2024-12-28 23:48:20,575 - INFO - Support Vector Classifier trained sucesfullyMetrics : Accuracy : 0.6542393265183404 , Precision : 0.6508583535597234 , Recall : 0.6542393265183404 , F1 Score : 0.638684217418146
+2024-12-28 23:48:20,829 - INFO - K-Nearest Neighbors trained sucesfullyMetrics : Accuracy : 0.745640408899579 , Precision : 0.7440285757555918 , Recall : 0.745640408899579 , F1 Score : 0.7438735122025648
+2024-12-28 23:48:20,998 - INFO - Naive Bayes trained sucesfullyMetrics : Accuracy : 0.8460613349368611 , Precision : 0.8464821861249374 , Recall : 0.8460613349368611 , F1 Score : 0.846227188190236
+2024-12-28 23:48:21,194 - INFO - Decision Tree trained sucesfullyMetrics : Accuracy : 0.9049909801563439 , Precision : 0.9049574690402827 , Recall : 0.9049909801563439 , F1 Score : 0.9049728900380268
+2024-12-28 23:48:21,352 - INFO - ModelSelection pipleine completed sucesfully

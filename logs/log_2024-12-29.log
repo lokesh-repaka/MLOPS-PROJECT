@@ -1,0 +1,8 @@
+2024-12-29 11:40:42,336 - INFO - Data Loading for Model training
+2024-12-29 11:40:42,432 - INFO - Data load sucesfull
+2024-12-29 11:40:42,433 - INFO - Data splitting started
+2024-12-29 11:40:42,440 - INFO - ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
+2024-12-29 11:40:42,447 - INFO - Data splitting done
+2024-12-29 11:40:42,448 - INFO - Loaded hyperparamters :  {'max_depth': [3, 5, 7], 'learning_rate': [0.01, 0.1, 0.2], 'n_estimators': [50, 100, 200]}
+2024-12-29 11:40:42,450 - INFO - Training model started
+2024-12-29 11:40:42,452 - ERROR - Error in /Users/lokeshrepaka/Desktop/project/src/model_training.py , line 80 : Error while training model

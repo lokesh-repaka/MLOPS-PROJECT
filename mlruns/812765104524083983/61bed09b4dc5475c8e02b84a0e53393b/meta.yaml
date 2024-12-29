@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/lokeshrepaka/Desktop/project/mlruns/812765104524083983/61bed09b4dc5475c8e02b84a0e53393b/artifacts
+end_time: 1735452259445
+entry_point_name: ''
+experiment_id: '812765104524083983'
+lifecycle_stage: active
+run_id: 61bed09b4dc5475c8e02b84a0e53393b
+run_name: rumbling-yak-433
+run_uuid: 61bed09b4dc5475c8e02b84a0e53393b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735452259306
+status: 4
+tags: []
+user_id: lokeshrepaka

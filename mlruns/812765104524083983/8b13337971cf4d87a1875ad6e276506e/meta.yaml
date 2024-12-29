@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/lokeshrepaka/Desktop/project/mlruns/812765104524083983/8b13337971cf4d87a1875ad6e276506e/artifacts
+end_time: 1735451442456
+entry_point_name: ''
+experiment_id: '812765104524083983'
+lifecycle_stage: active
+run_id: 8b13337971cf4d87a1875ad6e276506e
+run_name: bright-frog-414
+run_uuid: 8b13337971cf4d87a1875ad6e276506e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735451442321
+status: 4
+tags: []
+user_id: lokeshrepaka

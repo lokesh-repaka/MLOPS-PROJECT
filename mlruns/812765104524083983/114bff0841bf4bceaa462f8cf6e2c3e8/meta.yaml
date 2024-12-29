@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/lokeshrepaka/Desktop/project/mlruns/812765104524083983/114bff0841bf4bceaa462f8cf6e2c3e8/artifacts
+end_time: 1735452618394
+entry_point_name: ''
+experiment_id: '812765104524083983'
+lifecycle_stage: active
+run_id: 114bff0841bf4bceaa462f8cf6e2c3e8
+run_name: welcoming-smelt-84
+run_uuid: 114bff0841bf4bceaa462f8cf6e2c3e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735452618255
+status: 4
+tags: []
+user_id: lokeshrepaka
