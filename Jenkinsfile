@@ -77,7 +77,7 @@ pipeline {
                 script {
                     // Scanning Docker Image
                     echo 'Scanning Docker Image........'
-                    sh "trivy image ${DOCKERHUB_REPOSITORY}:latest --format table -o trivy-image-scan-report.html"
+                    sh "trivy image ${DOCKERHUB_REPOSITORY}:latest --format table --scanners vuln -o trivy-image-scan-report.html"
                 }
             }
         }
@@ -94,15 +94,7 @@ pipeline {
             }
         }
 
-        stage('AWS Deployment') {
-            steps {
-                script {
-                    // AWS Deployment
-                    echo 'AWS Deployment........'
-                    sh "aws ecs update-service --cluster dataguru_ecs --service dataguru_service --force-new-deployment"
-                }
-            }
-        }
+
 
 
     }
