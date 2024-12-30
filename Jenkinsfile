@@ -4,6 +4,7 @@ pipeline {
     environment {
         VENV_DIR = 'venv'
         
+        
     }
     
     stages {
@@ -57,6 +58,27 @@ pipeline {
                     // Trivy Scanning
                     echo 'Trivy Scanning.........'
                     sh "trivy fs ./ --format table -o trivy-fs-report.html"
+                }
+            }
+        }
+
+
+        stage('Building Docker Image') {
+            steps {
+                script {
+                    // Building Docker Image
+                    echo 'Building Docker Image........'
+                    dockerImage = docker.build("mlops")
+                }
+            }
+        }
+
+        stage('Scanning Docker Image') {
+            steps {
+                script {
+                    // Scanning Docker Image
+                    echo 'Scanning Docker Image........'
+                    sh "trivy image mlops:latest --format table -o trivy-image-scan-report.html"
                 }
             }
         }
