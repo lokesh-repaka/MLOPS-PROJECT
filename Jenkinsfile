@@ -50,6 +50,18 @@ pipeline {
             }
         }
 
+
+        stage('Trivy Scanning') {
+            steps {
+                script {
+                    // Trivy Scanning
+                    echo 'Trivy Scanning.........'
+                    sh "trivy fs ./ --format table -o trivy-fs-report.html"
+                }
+            }
+        }
+
+
     
 
   
