@@ -2,9 +2,11 @@ setuptools
 mysql-connector-python
 scikit-learn
 
-xgboost==2.0.0
-lightgbm==2.2.0
+xgboost
+lightgbm
 tensorboard
 torch
 matplotlib
 mlflow
+dvc
+flask

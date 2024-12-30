@@ -7,7 +7,7 @@ import mlflow
 import mlflow.sklearn
 from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix
-import xgboost as xgb
+import lightgbm as lgb
 from src.logger import get_logger
 from src.custom_exception import CustomException
 from config.paths_config import *
@@ -55,7 +55,7 @@ class ModelTraining:
     def train_model(self,X_train,y_train,params):
         try:
             logger.info("Training model started")
-            lgbm = xgb.XGBClassifier()
+            lgbm = lgb.LGBMClassifier()
 
             grid_search = GridSearchCV(lgbm , param_grid=params , cv=3 , scoring='accuracy')
 
@@ -69,42 +69,6 @@ class ModelTraining:
         
         except Exception as e:
             raise CustomException("Error while training model" , sys)
-        
-
-
-    def train_model(self, X_train, y_train, params_file):
-        try:
-            logger.info("Training model started")
-            
-            # Load parameters from JSON file
-            with open(params_file, 'r') as file:
-                params = json.load(file)
-
-            xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
-            xgb_clf.fit(X_train, y_train)
-
-
-            # # Initialize XGBoost classifier
-            # xgb_clf = xgb.XGBClassifier(use_label_encoder=False, eval_metric='logloss')
-
-            # # Perform GridSearchCV
-            # grid_search = GridSearchCV(xgb_clf, param_grid=params, cv=3, scoring='accuracy')
-            
-            # # Fit the model
-            # grid_search.fit(X_train, y_train)
-            
-            logger.info("Model training completed")
-
-            # # Store the best model and return best parameters
-            self.best_model = xgb_clf.get_params()
-            return xgb_clf.get_params()
-
- 
-
-        
-        except Exception as e:
-            raise CustomException("Error while training model", sys)
-
         
     def evaluate_model(self,X_test , y_test):
         try:

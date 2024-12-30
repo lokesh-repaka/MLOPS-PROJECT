@@ -1,8 +1,156 @@
-2024-12-29 11:40:42,336 - INFO - Data Loading for Model training
-2024-12-29 11:40:42,432 - INFO - Data load sucesfull
-2024-12-29 11:40:42,433 - INFO - Data splitting started
-2024-12-29 11:40:42,440 - INFO - ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
-2024-12-29 11:40:42,447 - INFO - Data splitting done
-2024-12-29 11:40:42,448 - INFO - Loaded hyperparamters :  {'max_depth': [3, 5, 7], 'learning_rate': [0.01, 0.1, 0.2], 'n_estimators': [50, 100, 200]}
-2024-12-29 11:40:42,450 - INFO - Training model started
-2024-12-29 11:40:42,452 - ERROR - Error in /Users/lokeshrepaka/Desktop/project/src/model_training.py , line 80 : Error while training model
+2024-12-29 14:33:01,341 - INFO - Data Ingestion has started
+2024-12-29 14:33:01,342 - INFO - Directory for Ingestion created
+2024-12-29 14:33:01,654 - INFO - Data loaded successfully with shape: (103904, 25)
+2024-12-29 14:33:01,763 - INFO - Data Splitted Sucessfully
+2024-12-29 14:33:02,459 - INFO - Training and testing data saved sucesffuly
+2024-12-29 14:33:02,459 - INFO - Starting the pipeline of Data Procesing
+2024-12-29 14:33:02,459 - INFO - Data Processinng Started
+2024-12-29 14:33:02,735 - INFO - Data read succesfull : Data shape : (83123, 25)
+2024-12-29 14:33:02,735 - INFO - Dropping Unnecesary Columns :  ['MyUnknownColumn', 'id']
+2024-12-29 14:33:02,750 - INFO - Columns dropped Sucesfully : Shape = (83123, 23)
+2024-12-29 14:33:02,750 - INFO - Handling outliers : Columns = ['Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes', 'Checkin service']
+2024-12-29 14:33:02,782 - INFO - Outliers handled  Sucesffuully : (83123, 23)
+2024-12-29 14:33:02,782 - INFO - Handling null values
+2024-12-29 14:33:02,782 - INFO - Missing values handled sucessfully : Shape == (83123, 23)
+2024-12-29 14:33:03,330 - INFO - Processed data saved sucesfully
+2024-12-29 14:33:03,330 - INFO - Data Proccesing Pipeline COmpleted Sucessfully
+2024-12-29 14:33:03,330 - INFO - Starting your feature enginnering pipeline
+2024-12-29 14:33:03,330 - INFO - Loading data
+2024-12-29 14:33:03,509 - INFO - Data loaded sucesffuly
+2024-12-29 14:33:03,509 - INFO - Starting Feature Construction
+2024-12-29 14:33:03,509 - INFO - Feature Construction done sucesfully
+2024-12-29 14:33:03,509 - INFO - Starting Binning of Age Column
+2024-12-29 14:33:03,524 - INFO - Binning of Age Column Sucesfull
+2024-12-29 14:33:03,524 - INFO - Performing label encoding on ['Gender', 'Customer Type', 'Type of Travel', 'Class', 'satisfaction', 'Age Group']
+2024-12-29 14:33:03,613 - INFO - Mapping for Gender : {'Female': np.int64(0), 'Male': np.int64(1)}
+2024-12-29 14:33:03,613 - INFO - Mapping for Customer Type : {'Loyal Customer': np.int64(0), 'disloyal Customer': np.int64(1)}
+2024-12-29 14:33:03,613 - INFO - Mapping for Type of Travel : {'Business travel': np.int64(0), 'Personal Travel': np.int64(1)}
+2024-12-29 14:33:03,613 - INFO - Mapping for Class : {'Business': np.int64(0), 'Eco': np.int64(1), 'Eco Plus': np.int64(2)}
+2024-12-29 14:33:03,613 - INFO - Mapping for satisfaction : {'neutral or dissatisfied': np.int64(0), 'satisfied': np.int64(1)}
+2024-12-29 14:33:03,613 - INFO - Mapping for Age Group : {'Adult': np.int64(0), 'Child': np.int64(1), 'Senior': np.int64(2), 'Youngster': np.int64(3)}
+2024-12-29 14:33:03,613 - INFO - Label Encoding sucesffull
+2024-12-29 14:33:03,613 - INFO - Starting Feature Selection
+2024-12-29 14:33:03,917 - INFO - Mutual Information Table is : 
+                              Feature  Mutual Information
+11                    Online boarding            0.211560
+23                        Delay Ratio            0.203223
+6               Inflight wifi service            0.163365
+4                               Class            0.134928
+3                      Type of Travel            0.114626
+5                     Flight Distance            0.091491
+13             Inflight entertainment            0.091207
+12                       Seat comfort            0.077452
+15                   Leg room service            0.060770
+14                   On-board service            0.056898
+8              Ease of Online booking            0.052302
+19                        Cleanliness            0.049877
+2                                 Age            0.046463
+16                   Baggage handling            0.042174
+18                   Inflight service            0.040770
+17                    Checkin service            0.032409
+10                     Food and drink            0.025753
+24                          Age Group            0.021902
+1                       Customer Type            0.017990
+9                       Gate location            0.012826
+21           Arrival Delay in Minutes            0.006706
+22                        Total Delay            0.005554
+20         Departure Delay in Minutes            0.003023
+7   Departure/Arrival time convenient            0.002004
+0                              Gender            0.000042
+2024-12-29 14:33:03,920 - INFO - Top features : ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
+2024-12-29 14:33:03,920 - INFO - Feature Selection Sucesfull
+2024-12-29 14:33:03,920 - INFO - Saving your data ...
+2024-12-29 14:33:04,254 - INFO - Data Saved succesfully at ./artifacts\engineered_data\final_df.csv
+2024-12-29 14:33:04,254 - INFO - Your FE pipeline sucesfully done..
+2024-12-29 14:33:04,254 - INFO - End of FE pipeline
+2024-12-29 14:33:04,836 - INFO - Data Loading for Model training
+2024-12-29 14:33:04,912 - INFO - Data load sucesfull
+2024-12-29 14:33:04,912 - INFO - Data splitting started
+2024-12-29 14:33:04,912 - INFO - ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
+2024-12-29 14:33:04,927 - INFO - Data splitting done
+2024-12-29 14:33:04,927 - INFO - Loaded hyperparamters :  {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 200, 300], 'max_depth': [5, 10, 15]}
+2024-12-29 14:33:04,943 - INFO - Training model started
+2024-12-29 14:34:06,218 - INFO - Model training completed
+2024-12-29 14:34:06,218 - INFO - Best hyperparamters are : {'learning_rate': 0.05, 'max_depth': 10, 'n_estimators': 300}
+2024-12-29 14:34:06,343 - INFO - Model evaluation sterted
+2024-12-29 14:34:06,468 - INFO - Evaluation metrics : {'accuracy': 0.9447218045112782, 'precison': 0.944829800649941, 'recall': 0.9447218045112782, 'f1_score': 0.9446077054363461, 'confusion_matrix': [[9125, 350], [569, 6581]]}
+2024-12-29 14:34:06,468 - INFO - saving model
+2024-12-29 14:34:06,499 - INFO - Model saved sucesfully
+2024-12-29 14:54:56,606 - INFO - Data Ingestion has started
+2024-12-29 14:54:56,606 - INFO - Directory for Ingestion created
+2024-12-29 14:54:56,857 - INFO - Data loaded successfully with shape: (103904, 25)
+2024-12-29 14:54:56,920 - INFO - Data Splitted Sucessfully
+2024-12-29 14:54:57,600 - INFO - Training and testing data saved sucesffuly
+2024-12-29 14:54:59,018 - INFO - Starting the pipeline of Data Procesing
+2024-12-29 14:54:59,018 - INFO - Data Processinng Started
+2024-12-29 14:54:59,215 - INFO - Data read succesfull : Data shape : (83123, 25)
+2024-12-29 14:54:59,215 - INFO - Dropping Unnecesary Columns :  ['MyUnknownColumn', 'id']
+2024-12-29 14:54:59,233 - INFO - Columns dropped Sucesfully : Shape = (83123, 23)
+2024-12-29 14:54:59,234 - INFO - Handling outliers : Columns = ['Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes', 'Checkin service']
+2024-12-29 14:54:59,265 - INFO - Outliers handled  Sucesffuully : (83123, 23)
+2024-12-29 14:54:59,265 - INFO - Handling null values
+2024-12-29 14:54:59,265 - INFO - Missing values handled sucessfully : Shape == (83123, 23)
+2024-12-29 14:54:59,835 - INFO - Processed data saved sucesfully
+2024-12-29 14:54:59,835 - INFO - Data Proccesing Pipeline COmpleted Sucessfully
+2024-12-29 14:55:02,434 - INFO - Starting your feature enginnering pipeline
+2024-12-29 14:55:02,434 - INFO - Loading data
+2024-12-29 14:55:02,592 - INFO - Data loaded sucesffuly
+2024-12-29 14:55:02,592 - INFO - Starting Feature Construction
+2024-12-29 14:55:02,592 - INFO - Feature Construction done sucesfully
+2024-12-29 14:55:02,592 - INFO - Starting Binning of Age Column
+2024-12-29 14:55:02,935 - INFO - Binning of Age Column Sucesfull
+2024-12-29 14:55:02,935 - INFO - Performing label encoding on ['Gender', 'Customer Type', 'Type of Travel', 'Class', 'satisfaction', 'Age Group']
+2024-12-29 14:55:03,025 - INFO - Mapping for Gender : {'Female': np.int64(0), 'Male': np.int64(1)}
+2024-12-29 14:55:03,025 - INFO - Mapping for Customer Type : {'Loyal Customer': np.int64(0), 'disloyal Customer': np.int64(1)}
+2024-12-29 14:55:03,025 - INFO - Mapping for Type of Travel : {'Business travel': np.int64(0), 'Personal Travel': np.int64(1)}
+2024-12-29 14:55:03,025 - INFO - Mapping for Class : {'Business': np.int64(0), 'Eco': np.int64(1), 'Eco Plus': np.int64(2)}
+2024-12-29 14:55:03,025 - INFO - Mapping for satisfaction : {'neutral or dissatisfied': np.int64(0), 'satisfied': np.int64(1)}
+2024-12-29 14:55:03,025 - INFO - Mapping for Age Group : {'Adult': np.int64(0), 'Child': np.int64(1), 'Senior': np.int64(2), 'Youngster': np.int64(3)}
+2024-12-29 14:55:03,025 - INFO - Label Encoding sucesffull
+2024-12-29 14:55:03,025 - INFO - Starting Feature Selection
+2024-12-29 14:55:03,269 - INFO - Mutual Information Table is : 
+                              Feature  Mutual Information
+11                    Online boarding            0.211560
+23                        Delay Ratio            0.203223
+6               Inflight wifi service            0.163365
+4                               Class            0.134928
+3                      Type of Travel            0.114626
+5                     Flight Distance            0.091491
+13             Inflight entertainment            0.091207
+12                       Seat comfort            0.077452
+15                   Leg room service            0.060770
+14                   On-board service            0.056898
+8              Ease of Online booking            0.052302
+19                        Cleanliness            0.049877
+2                                 Age            0.046463
+16                   Baggage handling            0.042174
+18                   Inflight service            0.040770
+17                    Checkin service            0.032409
+10                     Food and drink            0.025753
+24                          Age Group            0.021902
+1                       Customer Type            0.017990
+9                       Gate location            0.012826
+21           Arrival Delay in Minutes            0.006706
+22                        Total Delay            0.005554
+20         Departure Delay in Minutes            0.003023
+7   Departure/Arrival time convenient            0.002004
+0                              Gender            0.000042
+2024-12-29 14:55:03,275 - INFO - Top features : ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
+2024-12-29 14:55:03,275 - INFO - Feature Selection Sucesfull
+2024-12-29 14:55:03,275 - INFO - Saving your data ...
+2024-12-29 14:55:03,595 - INFO - Data Saved succesfully at ./artifacts\engineered_data\final_df.csv
+2024-12-29 14:55:03,595 - INFO - Your FE pipeline sucesfully done..
+2024-12-29 14:55:03,595 - INFO - End of FE pipeline
+2024-12-29 14:55:10,535 - INFO - Data Loading for Model training
+2024-12-29 14:55:10,613 - INFO - Data load sucesfull
+2024-12-29 14:55:10,613 - INFO - Data splitting started
+2024-12-29 14:55:10,613 - INFO - ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Flight Distance', 'Inflight entertainment', 'Seat comfort', 'Leg room service', 'On-board service', 'Ease of Online booking', 'Cleanliness']
+2024-12-29 14:55:10,628 - INFO - Data splitting done
+2024-12-29 14:55:10,628 - INFO - Loaded hyperparamters :  {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 200, 300], 'max_depth': [5, 10, 15]}
+2024-12-29 14:55:10,628 - INFO - Training model started
+2024-12-29 14:56:11,700 - INFO - Model training completed
+2024-12-29 14:56:11,700 - INFO - Best hyperparamters are : {'learning_rate': 0.05, 'max_depth': 10, 'n_estimators': 300}
+2024-12-29 14:56:11,700 - INFO - Model evaluation sterted
+2024-12-29 14:56:11,825 - INFO - Evaluation metrics : {'accuracy': 0.9447218045112782, 'precison': 0.944829800649941, 'recall': 0.9447218045112782, 'f1_score': 0.9446077054363461, 'confusion_matrix': [[9125, 350], [569, 6581]]}
+2024-12-29 14:56:11,841 - INFO - saving model
+2024-12-29 14:56:11,872 - INFO - Model saved sucesfully
